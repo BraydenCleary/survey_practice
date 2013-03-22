@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :password_confirmation
+  attr_accessible :password_confirmation, :password, :email, :username
 
   has_secure_password
   has_many :surveys_created , :class_name => 'Survey', :foreign_key => 'creator_id'
