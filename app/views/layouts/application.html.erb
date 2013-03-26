@@ -9,6 +9,7 @@
 <body>
   <% if current_user %>
     <%= link_to 'Logout', logout_path %>
+    <%= link_to 'Create a Survey', new_survey_path %>
   <% end %>
   <% if flash[:error] %>
     <%= flash[:error] %>
