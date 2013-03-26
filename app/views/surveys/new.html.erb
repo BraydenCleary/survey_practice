@@ -1,8 +1,8 @@
 <%= form_for(@survey) do |survey_form| %>
   <%= survey_form.text_field :title, :placeholder => 'survey title' %></br>
-  <%= survey_form.fields_for :question do |question_form| %>
+  <%= survey_form.fields_for :questions do |question_form| %>
     <%= question_form.text_field :text, :placeholder => 'question text' %></br>
-      <%= question_form.fields_for :choice do |choice_form| %>
+      <%= question_form.fields_for :choices do |choice_form| %>
         <%= choice_form.text_field :text, :placeholder => 'choice text' %></br>
       <% end %>
     <% end %>
