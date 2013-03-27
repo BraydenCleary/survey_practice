@@ -1,9 +1,9 @@
 class Survey < ActiveRecord::Base
-  attr_accessible :title, :creator, :questions_attributtes
+  attr_accessible :title, :creator, :questions_attributes
 
   has_many :users, :through => :user_surveys
   has_many :user_surveys
-  has_many :questions
+  has_many :questions, :inverse_of => :survey
 
   belongs_to :creator, :class_name => 'User'
 

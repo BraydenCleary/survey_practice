@@ -9,11 +9,8 @@ class SurveysController < ApplicationController
   end
 
   def create
-    puts params
     @survey = Survey.new(params[:survey])
     @survey.creator = current_user
-    # @question = Question.new(params[:survey][:question])
-    # @question.choices = 
     if @survey.save
       puts "hahahaha"
     else

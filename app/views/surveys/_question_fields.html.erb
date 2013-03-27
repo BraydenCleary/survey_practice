@@ -1,0 +1,7 @@
+<fieldset>
+  <%= f.text_field :text, :placeholder => 'question text' %></br>
+  <%= f.fields_for :choices do |builder| %>
+    <%= render 'choice_fields', f: builder  %>
+  <% end %>
+  <%= link_to_add_fields('Add Choice', f, :choices) %>
+</fieldset>
